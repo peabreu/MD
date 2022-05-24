@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# Paulo E. Abreu (c) paulo.abreu@ci.uc.pt
-# 
+# Copyright (C) Paulo E. Abreu paulo.abreu@ci.uc.pt
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
