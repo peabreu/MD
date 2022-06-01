@@ -1,0 +1,12 @@
+; https://doi.org/10.1021/acs.jcim.1c00580
+[ atomtypes ]
+;name   bond_type     mass     charge   ptype   sigma         epsilon       
+ Co       Co          0.00000  0.00000   A     8.70764e-02   1.47059e+03
+
+[ moleculetype ]
+;name            nrexcl
+ Co               3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   Co     1    Co    CO    1     2.000000     58.933195   ; qtot 2.000
