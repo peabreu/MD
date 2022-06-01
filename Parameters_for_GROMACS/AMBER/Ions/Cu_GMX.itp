@@ -1,0 +1,12 @@
+; https://doi.org/10.1021/acs.jcim.1c00580
+[ atomtypes ]
+;name   bond_type     mass     charge   ptype   sigma         epsilon       
+ Cu       Cu          0.00000  0.00000   A     8.19270e-02   2.73333e+03
+
+[ moleculetype ]
+;name            nrexcl
+ Cu               3
+
+[ atoms ]
+;   nr  type  resi  res  atom  cgnr     charge      mass       ; qtot   bond_type
+     1   Cu     1    Cu    CU    1     2.000000     63.546     ; qtot 2.000
