@@ -1,4 +1,4 @@
-; https://doi.org/10.1021/acs.jctc.0c01320
+; https://doi.org/10.1021/acs.jcim.1c00723
 
 [ atomtypes ]
 ;name   bond_type     mass     charge   ptype   sigma         epsilon       
