@@ -32,18 +32,20 @@ from math import *
 # parse command line arguments
 args = sys.argv[1:]
 nargs = len(args)
-if nargs != 1:
-        print('Specify one "file.gro"')
+if nargs != 2:
+        print('Specify one "file.gro" to be ordered and a template file')
+        print('Usage: ./order-file.py file-to-be-ordered.gro template.gro')
         sys.exit()
 filename = args[0]
-
+TEMPLATE = args[1]
 # Reads the file to be ordered
 lines1 = []
 with open(filename) as f1:
     lines1 = f1.readlines()
+
 # Reads the template used as a template for the ordering
 lines2 = []
-with open('IMD.gro') as f2:
+with open(TEMPLATE) as f2:
     lines2 = f2.readlines()
 
 # write the two initial lines
@@ -58,6 +60,10 @@ lastline2=lines2[-1]
 lines1=lines1[2:-1]
 lines2=lines2[2:-1]
 
+# loop for ordering the lines
+# loops over every line in the template file and finds
+# the corresponding line in the file to be ordered
+# each atom type should be unique
 for line in lines2:
     words=line.split()
     ATOM=words[2]
@@ -71,6 +77,9 @@ for line in lines2:
            found_atom=1
            break
     if found_atom==0:
-       print("atom not found:",word)
+        print("atom not found:",ATOM)
+        quit()
 print(lastline1,end='')
+# Should we re-order the atoms ? Now they keep their original numbering (it is good for debugging)
+# but I have no idea if this is required for gro files.
 
